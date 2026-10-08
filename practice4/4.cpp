@@ -10,7 +10,12 @@
 int main() {
     std::vector<std::string> words = {"one", "two", "three"};
     std::string& ref = words[0];
-    words.clear();
     std::cout << ref << "\n";   // ???
+    words.clear();
+    words.assign({"asldklaksd", "kaslkads"});
+    std::cout << ref << "\n";   // ???
+    words.clear();
+    std::cout << words[100] << "\n";   // ???
+
     return 0;
 }
