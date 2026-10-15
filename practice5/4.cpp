@@ -45,6 +45,7 @@ void runTests() {
 
     // Благодаря using, все базовые перегрузки видны
     assert(fp.print(42) == "int: 42");
+    assert(fp.print(0.5) == "double: 0.5");
     assert(fp.print("hello") == "string: hello");
     assert(fp.print(vector<int>{1, 2, 3}) == "vector: 1 2 3");
 

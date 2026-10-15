@@ -1,12 +1,13 @@
 /**
  Задача 1. Класс Complex: перегрузка операторов (20 мин)
  Тема: инкапсуляция, конструкторы, перегрузка арифметических операторов и <<.
- Условие. Реализуйте класс комплексных чисел Complex с приватными полями re и im. Перегрузите:
- operator+, operator-, operator* — арифметика;
- operator- (унарный) — знак; 
- operator+= — накопление;
- operator== и operator!= — сравнение;
- operator<< — вывод в формате a+bi или a-bi.
+ Условие. Реализуйте класс комплексных чисел Complex с приватными полями re и im.
+ Перегрузите:
+ - operator+, operator-, operator* — арифметика;
+ - operator- (унарный) — знак; 
+ - operator+= — накопление;
+ - operator== и operator!= — сравнение;
+ - operator<< — вывод в формате a+bi или a-bi.
  */
 
 #include <iostream>
@@ -72,6 +73,7 @@ void runTests() {
     assert((a - b) == Complex(2, 6));
     assert((a * b) == Complex(11, -2));
     assert((-a) == Complex(-3, -4));
+    assert((-b) == Complex(-1, 2));
 
     Complex c(1, 1);
     c += a;
